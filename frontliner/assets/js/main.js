@@ -1,21 +1,15 @@
-/**
- * main.js - Logic for InstaSenti Web Application
- * Project Structure: Frontliner (Vue.js + Tailwind)
- */
-
 const { createApp } = Vue;
 
 createApp({
     data() {
         return {
             isMobileMenuOpen: false,
-            // Navigation
             menuItems: [
                 { id: 1, name: 'Home', link: '#home' },
-                { id: 2, name: 'Technology', link: '#technologies' },
+                { id: 2, name: 'Resources', link: '#resources' },
                 { id: 3, name: 'About', link: '#about' },
             ],
-            // Technology Stack Data
+            activeTab: 'tech',
             techItems: [
                 {
                     id: 1,
@@ -66,7 +60,29 @@ createApp({
                     desc: 'Library HTTP client untuk komunikasi data antara frontend dan backend.'
                 }
             ],
-            // Form & State
+            articleItems: [
+                {
+                    id: 1,
+                    title : 'Analisis Sentimen Terhadap Ulasan Pengguna Aplikasi Threads Instagram di Playstore Menggunakan Naive Bayes',
+                    writer: 'Lukmana, L. O.',
+                    desc  : 'Penelitian ini bertujuan untuk mengklasifikasi Review Pengguna Aplikasi Threads di PlayStore menjadi 2 sentimen yaitu positif dan negatif.',
+                    link  : 'https://doi.org/10.23960/jitet.v13i2.6250'
+                },
+                {
+                    id: 2,
+                    title : 'Sentiment Analysis of Movie Reviews using Hybrid Method of Naive Bayes and Genetic Algorithm',
+                    writer: 'Govindarajam, M.',
+                    desc  : 'The ensemble framework is applied to sentiment classification tasks, with the aim of efficiently integrating different feature sets and classification algorithms to synthesize a more accurate classification procedure.',
+                    link  : 'https://www.proquest.com/openview/6753aa944962d2f75944880f1f6c690e/1?pq-origsite=gscholar&cbl=1626343'
+                },
+                {
+                    id: 3,
+                    title : 'Sentiment Analysis on Social Media Againts Public Policy Using Multinomial Naive Bayes',
+                    writer: 'Zulfikar, <i>et al</i>.',
+                    desc  : 'The purpose of this study is to analyze text documents from Twitter about public policies in handling COVID-19 that are currently or have been determined. ',
+                    link  : 'https://shura.shu.ac.uk/id/eprint/31645'
+                }
+            ],
             formData: {
                 username: '',
                 rangeMode: 'all',
@@ -75,18 +91,11 @@ createApp({
             isLoading: false,
             analysisResult: null,
             errorMessage: '',
-            // Theme Configuration
-            theme: {
-                positive: { chart: '#238823', bg: 'bg-[#238823]/10', bar: 'bg-[#238823]' },
-                neutral:  { chart: '#ffbf00', bg: 'bg-[#ffbf00]/15', bar: 'bg-[#ffbf00]' },
-                negative: { chart: '#d2222d', bg: 'bg-[#d2222d]/10', bar: 'bg-[#d2222d]' }
-            }
         }
     },
     computed: {
         parsedSummary() {
             if (!this.analysisResult) return null;
-            // Handle case if summary comes as a JSON string or Object
             const summary = this.analysisResult.summary;
             return typeof summary === 'string' ? JSON.parse(summary) : summary;
         }
@@ -127,11 +136,13 @@ createApp({
 
         renderChart() {
             const canvas = document.getElementById('sentimentChart');
-            if (!canvas || !this.parsedSummary) return;
+            if (!canvas) return;
 
             const ctx = canvas.getContext('2d');
             const data = this.parsedSummary;
+            console.log("Data untuk Chart:", data);
 
+            if (!data) return;
             if (window.myChart) window.myChart.destroy();
 
             window.myChart = new Chart(ctx, {
@@ -140,45 +151,36 @@ createApp({
                     labels: ['Positive', 'Neutral', 'Negative'],
                     datasets: [{
                         data: [
-                            data.positive?.count || 0, 
-                            data.neutral?.count || 0, 
-                            data.negative?.count || 0
+                            data.positive.count, 
+                            data.neutral.count, 
+                            data.negative.count
                         ],
-                        backgroundColor: [
-                            this.theme.positive.chart, 
-                            this.theme.neutral.chart, 
-                            this.theme.negative.chart
-                        ],
+                        backgroundColor: ['#238823', '#ffbf00', '#d2222d'],
                         borderWidth: 0,
-                        borderRadius: 10,
-                        hoverOffset: 15
+                        hoverOffset: 10
                     }]
                 },
                 options: {
-                    cutout: '75%',
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                            backgroundColor: '#1e293b',
-                            padding: 12,
-                            cornerRadius: 8
-                        }
+                    cutout: '60%',
+                    plugins: { 
+                        legend: { display: false } 
                     }
                 }
             });
         },
 
-        // Helper Methods for UI Styling
         getBgColor(key) {
-            return this.theme[key]?.bg || 'bg-gray-50';
-        },
-        getBarColor(key) {
-            return this.theme[key]?.bar || 'bg-gray-400';
+            if (key === 'positive') return 'bg-[#238823]/10';
+            if (key === 'negative') return 'bg-[#d2222d]/10';
+            return 'bg-[#ffbf00]/15';
         },
 
-        // Global Error Handler
+        getBarColor(key) {
+            if (key === 'positive') return 'bg-[#238823]';
+            if (key === 'negative') return 'bg-[#d2222d]';
+            return 'bg-[#ffbf00]';
+        },
+
         handleError(error) {
             if (error.response) {
                 const data = error.response.data;
