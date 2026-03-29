@@ -1,4 +1,8 @@
 import re
+import nltk
+nltk.download('punkt_tab')
+
+from nltk.tokenize import word_tokenize
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory, ArrayDictionary, StopWordRemover
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
@@ -97,15 +101,15 @@ class TextPreprocessor:
         }
 
         factory_stopword = StopWordRemoverFactory()
-        stopword         = factory_stopword.get_stop_words()
+        self.stopword    = factory_stopword.get_stop_words()
 
-        if 'tidak' in stopword:
-            stopword.remove('tidak')
+        if 'tidak' in self.stopword:
+            self.stopword.remove('tidak')
 
-        if 'bukan' in stopword:
-            stopword.remove('bukan')
+        if 'bukan' in self.stopword:
+            self.stopword.remove('bukan')
 
-        dictionary = ArrayDictionary(stopword)
+        dictionary = ArrayDictionary(self.stopword)
         self.stopword_remover = StopWordRemover(dictionary)
 
         factory_stemmer = StemmerFactory()
@@ -130,22 +134,31 @@ class TextPreprocessor:
 
     def normalize_text(self, text):
         return " ".join([self.slang_dict.get(word, word) for word in text.split()])
-
-    def remove_stopword(self, text):
+    
+    def tokenize_text(self, text):
         if isinstance(text, str):
-            return self.stopword_remover.remove(text)
+            return word_tokenize(text)
         return text
 
-    def stem_text(self, text):
-        if isinstance(text, str):
-            return self.stemmer.stem(text)
-        return text 
+    def remove_stopword(self, tokens):
+        if isinstance(tokens, list):
+            return [word for word in tokens if word not in self.stopword ]
+        return tokens
+
+    def stemmer_text(self, tokens):
+        if isinstance(tokens, list):
+            return [self.stemmer.stem(word) for word in tokens]
+        return tokens
 
     def preprocessed(self, text):
         text = self.emoji_to_indonesian(text)
         text = self.clean_text(text)
         text = self.normalize_text(text)
+        text = self.tokenize_text(text)
         text = self.remove_stopword(text)
-        text = self.stem_text(text)
+        text = self.stemmer_text(text)
+        
+        if isinstance(text, list):
+            text = ' '.join(text)
 
         return text

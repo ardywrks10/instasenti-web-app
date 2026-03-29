@@ -26,7 +26,7 @@
                 <div class="flex justify-between h-16 items-center">
                     
                     <a href="index.html" class="flex items-center">
-                        <img src="./assets/images/logo/instasenti.png" alt="InstaSenti Logo" class="h-10 w-auto">
+                        <img src="./assets/images/logo/instasenti.png" alt="InstaSent Logo" class="h-10 w-auto">
                     </a>
 
                     <div class="hidden md:flex space-x-8">
@@ -72,7 +72,7 @@
                         
                         <div class="lg:col-span-6 text-center lg:text-left">
                             <span class="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold bg-green-100 text-green-800 border border-green-200 mb-6">
-                                <span class="flex h-2 w-2 rounded-full bg-green-600 mr-2 animate-pulse"></span>
+                                <span class="flex h-2 w-2 rounded-full bg-green-800 mr-2 animate-pulse"></span>
                                 Now Available: Instagram Sentiment Analyzer
                             </span>
 
@@ -81,13 +81,13 @@
                             </h1>
                             
                             <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                                InstaSenti helps you understand audience sentiment in seconds. 
+                                InstaSent helps you understand audience sentiment in seconds. 
                                 Map insights into positive, neutral, and negative responses to improve your social engagement.
                             </p>
                             
                             <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-10">
-                                <a href="#analyze" class="px-5 py-2 rounded-lg font-medium transition-all duration-200 bg-green-800 text-white hover:bg-green-900 text-lg shadow-lg shadow-green-900/20">Analyze Now</a>
-                                <a href="#how-it-works" class="px-5 py-2 rounded-lg font-medium transition-all duration-200 border border-green-800 text-green-800 hover:bg-green-50 text-lg">How It Works</a>
+                                <a href="#model" class="px-5 py-2 rounded-lg font-medium transition-all duration-200 bg-green-800 text-white hover:bg-green-900 shadow-lg shadow-green-900/20">Analyze Now</a>
+                                <a href="#about" class="px-5 py-2 rounded-lg font-medium transition-all duration-200 border border-green-800 text-green-800 hover:bg-green-50">How It Works</a>
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div class="flex items-center gap-3 text-sm font-medium text-gray-700">
@@ -131,7 +131,7 @@
                             </div>
                             
                             <div class="hidden lg:block absolute bottom-12 -left-8 z-20">
-                                <div class="bg-emerald-600 text-white px-4 py-2 rounded-full shadow-xl text-xs font-bold">
+                                <div class="bg-green-800 text-white px-4 py-2 rounded-full shadow-xl text-xs font-bold">
                                     Sentiment Charts
                                 </div>
                             </div>
@@ -144,19 +144,19 @@
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     
                     <div class="text-center mb-16">
-                        <small class="text-green-600 uppercase tracking-[0.3em] font-black text-xs">Our Resources</small>
+                        <small class="text-green-800 uppercase tracking-[0.3em] font-black text-xs">Our Resources</small>
                         <h2 class="my-4 text-4xl font-black text-gray-900">Explore Our Foundation</h2>
                         
                         <div class="inline-flex p-1.5 bg-gray-100 rounded-2xl mt-6 border border-gray-200">
                             <button 
                                 @click="activeTab = 'tech'"
-                                :class="activeTab === 'tech' ? 'bg-white shadow-md text-green-600' : 'text-gray-500 hover:text-gray-700'"
+                                :class="activeTab === 'tech' ? 'bg-white shadow-md text-green-800' : 'text-gray-500 hover:text-gray-700'"
                                 class="px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-300">
                                 Tech Stack
                             </button>
                             <button 
                                 @click="activeTab = 'ref'"
-                                :class="activeTab === 'ref' ? 'bg-white shadow-md text-green-600' : 'text-gray-500 hover:text-gray-700'"
+                                :class="activeTab === 'ref' ? 'bg-white shadow-md text-green-800' : 'text-gray-500 hover:text-gray-700'"
                                 class="px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-300">
                                 ML References
                             </button>
@@ -166,7 +166,7 @@
                     <div v-if="activeTab === 'tech'" class="grid grid-cols-12 gap-8 animate-in fade-in zoom-in duration-500">
                         <div v-for="tech in techItems" :key="tech.id" class="lg:col-span-3 md:col-span-6 col-span-12 group">
                             <div class="flex flex-col items-center md:items-start p-6 rounded-3xl border border-transparent hover:border-green-100 hover:bg-green-50/50 transition-all duration-300">
-                                <div class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center mb-6 v-html" v-html="tech.logo"></div>
+                                <div class="w-14 h-14 bg-green-100 text-green-800 rounded-2xl flex items-center justify-center mb-6 v-html" v-html="tech.logo"></div>
                                 <h4 class="text-xl font-bold mb-3 text-gray-800">{{ tech.name }}</h4>
                                 <p class="text-sm text-gray-500 leading-relaxed text-justify">{{ tech.desc }}</p>
                             </div>
@@ -190,7 +190,7 @@
                                     </div>
                                 </div>
 
-                                <h4 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-green-600 transition-colors leading-tight text-justify">
+                                <h4 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-green-800 transition-colors leading-tight text-justify">
                                     {{ article.title }}
                                 </h4>
                                 
@@ -198,7 +198,7 @@
                                     {{ article.desc }}
                                 </p>
                                 
-                                <div class="mt-6 flex items-center text-xs font-bold text-green-600 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div class="mt-6 flex items-center text-xs font-bold text-green-800 opacity-0 group-hover:opacity-100 transition-opacity">
                                     Read Full Article 
                                     <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </div>
@@ -207,7 +207,195 @@
                     </div>
                 </div>
             </section>
-            <section class="my-16" id="model">
+            <section class="py-16 lg:py-24 overflow-hidden" id="about">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 items-center gap-12 lg:gap-10">
+                        <div class="lg:col-span-7 col-span-12 order-1 lg:order-2">
+                            <div class="bg-white p-6 md:p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100">
+                                <div class="hidden lg:block relative w-full pt-4 pb-4">
+                                    <div class="grid grid-cols-4 gap-4 w-full relative z-10">
+                                        <div class="flex flex-col items-center text-center">
+                                            <div class="relative">
+                                                <div class="w-16 h-16 rounded-full bg-green-50 text-green-600 flex items-center justify-center border border-green-100 shadow-sm transition-transform hover:-translate-y-1 duration-300 ring-4 ring-white">
+                                                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                                                </div>
+                                                <svg class="absolute top-1/2 -right-15 -translate-y-1/2 w-5 h-5 text-green-300" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                                            </div>
+                                            <span class="text-xs font-bold text-gray-800 mt-4 leading-tight">User Input</span>
+                                        </div>
+
+                                        <div class="flex flex-col items-center text-center">
+                                            <div class="relative">
+                                                <div class="w-16 h-16 rounded-full bg-green-50 text-green-600 flex items-center justify-center border border-green-100 shadow-sm transition-transform hover:-translate-y-1 duration-300 ring-4 ring-white">
+                                                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008z" /></svg>
+                                                </div>
+                                                <svg class="absolute top-1/2 -right-15 -translate-y-1/2 w-5 h-5 text-green-300" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                                            </div>
+                                            <span class="text-xs font-bold text-gray-800 mt-4 leading-tight">Backend Transmission</span>
+                                        </div>
+
+                                        <div class="flex flex-col items-center text-center">
+                                            <div class="relative">
+                                                <div class="w-16 h-16 rounded-full bg-green-50 text-green-600 flex items-center justify-center border border-green-100 shadow-sm transition-transform hover:-translate-y-1 duration-300 ring-4 ring-white">
+                                                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>
+                                                </div>
+                                                <svg class="absolute top-1/2 -right-15 -translate-y-1/2 w-5 h-5 text-green-300" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                                            </div>
+                                            <span class="text-xs font-bold text-gray-800 mt-4 leading-tight px-1">Selenium Scraping Trigger</span>
+                                        </div>
+
+                                        <div class="flex flex-col items-center text-center">
+                                            <div class="relative">
+                                                <div class="w-16 h-16 rounded-full bg-green-50 text-green-600 flex items-center justify-center border border-green-100 shadow-sm transition-transform hover:-translate-y-1 duration-300 ring-4 ring-white">
+                                                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" /></svg>
+                                                </div>
+                                                <svg class="absolute -bottom-20 left-1/2 -translate-x-1/2 w-5 h-5 text-green-300" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
+                                            </div>
+                                            <span class="text-xs font-bold text-gray-800 mt-4 leading-tight">Comment Collection</span>
+                                        </div>
+                                    </div>
+                                    <div class="h-16 w-full relative"></div>
+                                    <div class="grid grid-cols-4 gap-4 w-full relative z-10">
+                                        
+                                        <div class="flex flex-col items-center text-center">
+                                            <div class="relative">
+                                                <div class="w-16 h-16 rounded-full bg-green-50 text-green-600 flex items-center justify-center border border-green-100 shadow-sm transition-transform hover:-translate-y-1 duration-300 ring-4 ring-white">
+                                                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" /><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" /></svg>
+                                                </div>
+                                            </div>
+                                            <span class="text-xs font-bold text-gray-800 mt-4 leading-tight px-1">Vue.js & Chart.js Visualization</span>
+                                        </div>
+
+                                        <div class="flex flex-col items-center text-center">
+                                            <div class="relative">
+                                                <div class="w-16 h-16 rounded-full bg-green-50 text-green-600 flex items-center justify-center border border-green-100 shadow-sm transition-transform hover:-translate-y-1 duration-300 ring-4 ring-white">
+                                                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" /></svg>
+                                                </div>
+                                                <svg class="absolute top-1/2 -left-15 -translate-y-1/2 w-5 h-5 text-green-300" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+                                            </div>
+                                            <span class="text-xs font-bold text-gray-800 mt-4 leading-tight px-1">Transmission Back to Frontend</span>
+                                        </div>
+
+                                        <div class="flex flex-col items-center text-center">
+                                            <div class="relative">
+                                                <div class="w-16 h-16 rounded-full bg-green-50 text-green-600 flex items-center justify-center border border-green-100 shadow-sm transition-transform hover:-translate-y-1 duration-300 ring-4 ring-white">
+                                                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" /></svg>
+                                                </div>
+                                                <svg class="absolute top-1/2 -left-15 -translate-y-1/2 w-5 h-5 text-green-300" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+                                            </div>
+                                            <span class="text-xs font-bold text-gray-800 mt-4 leading-tight px-1">Naive Bayes AI Classification</span>
+                                        </div>
+
+                                        <div class="flex flex-col items-center text-center">
+                                            <div class="relative">
+                                                <div class="w-16 h-16 rounded-full bg-green-50 text-green-600 flex items-center justify-center border border-green-100 shadow-sm transition-transform hover:-translate-y-1 duration-300 ring-4 ring-white">
+                                                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.054-2.066.018a15.03 15.03 0 01-2.924-.462c-1.573-.443-2.668-2.028-2.668-3.702 0-2.31 1.76-4.237 4.02-4.531.523-.068 1.054-.105 1.593-.112m6.524 0c.54.007 1.07.044 1.593.112 2.26.294 4.02 2.22 4.02 4.531 0 1.674-1.095 3.259-2.668 3.702a15.03 15.03 0 01-2.924.462c-.68.072-1.378.078-2.066-.018M12 12v3m0 0a3 3 0 100-6 3 3 0 000 6z" /></svg>
+                                                </div>
+                                                <svg class="absolute top-1/2 -left-15 -translate-y-1/2 w-5 h-5 text-green-300" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+                                            </div>
+                                            <span class="text-xs font-bold text-gray-800 mt-4 leading-tight">Data Preprocessing (Pandas)</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col items-center gap-2 lg:hidden">
+                                    <style>.mob-arrow { @apply text-green-300 w-5 h-5 my-1; }</style>
+                                    
+                                    <div class="w-full flex items-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
+                                        <div class="w-12 h-12 shrink-0 rounded-full bg-white text-green-600 flex items-center justify-center border border-green-200 shadow-sm"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg></div>
+                                        <p class="font-bold text-gray-800 text-sm">1. User Input</p>
+                                    </div>
+                                    <svg class="mob-arrow" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
+
+                                    <div class="w-full flex items-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
+                                        <div class="w-12 h-12 shrink-0 rounded-full bg-white text-green-600 flex items-center justify-center border border-green-200 shadow-sm"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008z" /></svg></div>
+                                        <p class="font-bold text-gray-800 text-sm">2. Backend Transmission</p>
+                                    </div>
+                                    <svg class="mob-arrow" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
+
+                                    <div class="w-full flex items-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
+                                        <div class="w-12 h-12 shrink-0 rounded-full bg-white text-green-600 flex items-center justify-center border border-green-200 shadow-sm"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg></div>
+                                        <p class="font-bold text-gray-800 text-sm">3. Selenium Scraping Trigger</p>
+                                    </div>
+                                    <svg class="mob-arrow" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
+
+                                    <div class="w-full flex items-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
+                                        <div class="w-12 h-12 shrink-0 rounded-full bg-white text-green-600 flex items-center justify-center border border-green-200 shadow-sm"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" /></svg></div>
+                                        <p class="font-bold text-gray-800 text-sm">4. Comment Collection</p>
+                                    </div>
+                                    <svg class="mob-arrow" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
+
+                                    <div class="w-full flex items-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
+                                        <div class="w-12 h-12 shrink-0 rounded-full bg-white text-green-600 flex items-center justify-center border border-green-200 shadow-sm"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.054-2.066.018a15.03 15.03 0 01-2.924-.462c-1.573-.443-2.668-2.028-2.668-3.702 0-2.31 1.76-4.237 4.02-4.531.523-.068 1.054-.105 1.593-.112m6.524 0c.54.007 1.07.044 1.593.112 2.26.294 4.02 2.22 4.02 4.531 0 1.674-1.095 3.259-2.668 3.702a15.03 15.03 0 01-2.924.462c-.68.072-1.378.078-2.066-.018M12 12v3m0 0a3 3 0 100-6 3 3 0 000 6z" /></svg></div>
+                                        <p class="font-bold text-gray-800 text-sm">5. Data Preprocessing (Pandas)</p>
+                                    </div>
+                                    <svg class="mob-arrow" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
+
+                                    <div class="w-full flex items-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
+                                        <div class="w-12 h-12 shrink-0 rounded-full bg-white text-green-600 flex items-center justify-center border border-green-200 shadow-sm"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" /></svg></div>
+                                        <p class="font-bold text-gray-800 text-sm">6. Naive Bayes AI</p>
+                                    </div>
+                                    <svg class="mob-arrow" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
+
+                                    <div class="w-full flex items-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
+                                        <div class="w-12 h-12 shrink-0 rounded-full bg-white text-green-600 flex items-center justify-center border border-green-200 shadow-sm"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" /></svg></div>
+                                        <p class="font-bold text-gray-800 text-sm">7. Transmission Back</p>
+                                    </div>
+                                    <svg class="mob-arrow" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
+                                    <div class="w-full flex items-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
+                                        <div class="w-12 h-12 shrink-0 rounded-full bg-white text-green-600 flex items-center justify-center border border-green-200 shadow-sm"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" /><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" /></svg></div>
+                                        <p class="font-bold text-gray-800 text-sm">8. Vue.js & Chart.js</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 col-span-12 order-2 lg:order-1">
+                            <div>
+                                <small class="text-green-800 uppercase tracking-[0.3em] font-black text-xs">How does InstaSent Work?</small>
+                                
+                                <div class="mb-6 mt-4">
+                                    <h2 class="mb-6 text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">Understanding the Brain Behind InstaSent</h2>                                    
+                                    <div class="space-y-5 text-gray-600 leading-relaxed text-justify">
+                                        <p>
+                                            InstaSent operates through the integration of three core layers: 
+                                            data scraping, artificial intelligence integration, and result visualization. 
+                                            The process begins when users input the Instagram username
+                                            and the number of posts, after which the request is sent to the 
+                                            backend, triggering <span class="text-green-800 font-medium"><u>Selenium</u></span> 
+                                            to perform automated 
+                                            <span class="text-green-800 font-medium"><u>web scraping</u></span>.
+                                        </p>
+                                        <p>
+                                            Raw (unpreprocessed) 
+                                            comment data is then processed using 
+                                            <span class="text-green-800 font-medium"><u>Pandas</u></span> 
+                                            and classified by a 
+                                            <span class="text-green-800 font-medium"><u>Support Vector Machine (SVM)</u></span> 
+                                            model trained on 
+                                            <span class="text-green-800 font-medium"><u>over 1000+ data samples</u></span> 
+                                            into three sentiment categories: 
+                                            <span class="text-green-800 font-medium"><u>positive</u></span>, 
+                                            <span class="text-green-800 font-medium"><u>neutral</u></span>, 
+                                            or <span class="text-green-800 font-medium"><u>negative</u></span>. 
+                                            The analysis results, including total post statistics
+                                            and sentiment percentages, 
+                                            are then sent back to the frontend.
+                                        </p>
+                                        <p>
+                                            In the final stage, the data is captured by 
+                                            <span class="text-green-800 font-medium"><u>Vue.js</u></span> 
+                                            and rendered into visually appealing components 
+                                            with the support of <span class="text-green-800 font-medium"><u>Chart.js</u></span>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>         
+            <section class="bg-white lg:py-20 py-8" id="model">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid grid-cols-12 bg-linear-to-br from-green-900 via-green-800 to-green-950 rounded-2xl lg:p-14 p-8 shadow-2xl relative overflow-hidden">
                         
@@ -216,10 +404,10 @@
                         <div class="lg:col-span-10 lg:col-start-2 col-span-12 justify-center text-center relative z-10">
                             <div class="mb-10 text-center">
                                 <h3 class="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
-                                    Coba Demo Analisis AI
+                                    Try Model   
                                 </h3>
                                 <p class="text-green-100 text-lg max-w-2xl mx-auto">
-                                    Lengkapi detail di bawah ini untuk melihat bagaimana AI kami bekerja memetakan sentimen audiens Anda.
+                                    Complete the details below to see how the machine learning model maps your audience's sentiment.
                                 </p>
                             </div>
 
@@ -233,16 +421,16 @@
                                             placeholder="misal: kopikenangan.id" 
                                             required />
                                     </div>
-                                    <p class="text-[10px] text-green-200 italic mt-2 ml-1">* Pastikan akun bersifat publik</p>
+                                    <p class="text-[10px] text-green-200 italic mt-2 ml-1">* Ensure the account is public</p>
                                 </div>
 
                                 <div class="md:col-span-6 col-span-12">
-                                    <label class="block text-sm font-semibold text-green-200 mb-2 ml-1">Jumlah Postingan</label>
+                                    <label class="block text-sm font-semibold text-green-200 mb-2 ml-1">Number of Posts</label>
                                     <div class="relative">
                                         <select v-model="formData.rangeMode"
                                             class="block w-full px-5 py-4 rounded-xl border-none bg-white/10 text-white appearance-none focus:ring-2 focus:ring-green-400 focus:bg-white/20 transition-all outline-none shadow-inner cursor-pointer">
-                                            <option value="all" class="bg-green-900 text-white">Semua Postingan</option>
-                                            <option value="custom" class="bg-green-900 text-white">Postingan Spesifik (Custom)</option>
+                                            <option value="all" class="bg-green-900 text-white">All Posts</option>
+                                            <option value="custom" class="bg-green-900 text-white">Specific Posts (Custom)</option>
                                         </select>
                                         <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-green-400">
                                             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -255,13 +443,13 @@
                                 <div v-if="formData.rangeMode === 'custom'" 
                                     class="col-span-12 animate-in fade-in zoom-in-95 duration-300">
                                     <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
-                                        <label class="block text-sm font-semibold text-green-200 mb-2 ml-1">Input Urutan Postingan</label>
+                                        <label class="block text-sm font-semibold text-green-200 mb-2 ml-1">Enter Post Range</label>
                                         <input type="text" v-model="formData.customRange"
                                             class="block w-full px-5 py-4 rounded-xl border-none bg-white/10 text-white placeholder-green-300/50 focus:ring-2 focus:ring-green-400 focus:bg-white/20 transition-all outline-none shadow-inner" 
                                             placeholder="Contoh: 1, 2, 5-8, 10" :required="formData.rangeMode === 'custom'" />
                                         <p class="text-[11px] italic text-green-200 mt-3 flex items-center gap-2">
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                            Tips: Gunakan tanda hubung (-) untuk rentang postingan. Angka 1 menunjukan postingan pertama
+                                            Tips: Use a hyphen (-) for post ranges. Number 1 indicates the first post.
                                         </p>
                                     </div>
                                 </div>
@@ -273,7 +461,7 @@
                                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
                                             </svg>
-                                            <span>Mulai Analisis Sekarang</span>
+                                            <span>Start Analysis Now</span>
                                         </template>
 
                                         <template v-else>
@@ -281,11 +469,11 @@
                                                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                                                 <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                             </svg>
-                                            <span>Sedang Menganalisis...</span>
+                                            <span>Analyzing ...</span>
                                         </template>
                                     </button>
                                     <p class="text-center mt-6 text-xs text-green-200 italic font-light">
-                                        * Proses ini membutuhkan waktu tergantung jumlah komentar postingan.
+                                        * This process may take some time depending on the number of comments.
                                     </p>
                                 </div>
                             </form>
@@ -293,12 +481,12 @@
                     </div>
                 </div>
             </section>
-            <section v-if="analysisResult" id="result-section" class="py-12 animate-in fade-in slide-in-from-bottom-10 duration-700">
+            <section v-if="analysisResult" id="result-section" class="py-12 animate-in bg-white fade-in slide-in-from-bottom-10 duration-700">
                 <div class="max-w-5xl mx-auto px-4">
                     <div class="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100">
                         <h2 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
-                            <span class="p-2 bg-green-100 rounded-lg text-green-600">📊</span>
-                            Hasil Analisis Sentimen
+                            <span class="p-2 bg-green-100 rounded-lg text-green-800">📊</span>
+                            Sentiment Analysis Results
                         </h2>
                         <div class="grid grid-cols-2 gap-4 mb-10">
                             <div class="bg-slate-50 border border-slate-100 p-4 rounded-2xl flex items-center gap-4 group transition-all hover:bg-slate-100/80">
@@ -308,7 +496,7 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Total Postingan</p>
+                                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Total Posts</p>
                                     <p class="text-xl font-black text-slate-800">{{ analysisResult.total_post }}</p>
                                 </div>
                             </div>
@@ -320,7 +508,7 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Postingan Terpilih</p>
+                                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Selected Posts</p>
                                     <p class="text-xl font-black text-slate-800">{{ analysisResult.selected_post }}</p>
                                 </div>
                             </div>
@@ -331,7 +519,7 @@
                                     <canvas id="sentimentChart" width="300" height="300"></canvas>
                                     <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
                                         <span class="text-4xl font-black text-gray-800">{{ analysisResult.total_comments }}</span>
-                                        <span class="text-xs text-gray-400 uppercase tracking-widest">Total Komentar</span>
+                                        <span class="text-xs text-gray-400 uppercase tracking-widest">Total Comments</span>
                                     </div>
                                 </div>
                             </div>
@@ -345,7 +533,7 @@
                                             <div class="w-3 h-10 rounded-full" :class="getBarColor(key)"></div>
                                             <div>
                                                 <p class="text-sm font-bold capitalize text-gray-600">{{ key }}</p>
-                                                <p class="text-2xl font-black text-gray-900">{{ val.count }} <span class="text-sm font-normal text-gray-500">Komentar</span></p>
+                                                <p class="text-2xl font-black text-gray-900">{{ val.count }} <span class="text-sm font-normal text-gray-500">Comments</span></p>
                                             </div>
                                         </div>
                                         <div class="text-right">
@@ -360,7 +548,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                             <p class="text-[11px] font-medium text-gray-600 italic tracking-wide">
-                                InstaSenti dapat membuat kesalahan. Pertimbangkan untuk memeriksa informasi penting secara manual.
+                                InstaSent can make mistakes. Consider verifying important information manually.
                             </p>
                         </div>
                     </div>
@@ -368,5 +556,5 @@
             </section>
         </main>
     </div>
-</body>
+</body> 
 </html>

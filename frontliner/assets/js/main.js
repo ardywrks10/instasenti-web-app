@@ -101,7 +101,7 @@ createApp({
         }
     },
     methods: {
-        toggleMobileMenu() {
+        configureWindow() {
             this.isMobileMenuOpen = !this.isMobileMenuOpen;
         },
 
@@ -119,7 +119,6 @@ createApp({
                 const response = await axios.post('http://127.0.0.1:8000/analyze/instagram', payload);
                 this.analysisResult = response.data;
 
-                // UI Updates after data is received
                 this.$nextTick(() => {
                     setTimeout(() => { this.renderChart(); }, 200);
                     setTimeout(() => { 

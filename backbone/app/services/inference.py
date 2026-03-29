@@ -4,7 +4,7 @@ from core.preprocessing import TextPreprocessor
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
-model_path      = os.path.join(BASE_DIR, 'model/nb_model.pkl')
+model_path      = os.path.join(BASE_DIR, 'model/svm_model.pkl')
 vectorizer_path = os.path.join(BASE_DIR, 'model/vectorizer.pkl')
 
 model      = joblib.load(model_path)
