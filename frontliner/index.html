@@ -69,7 +69,6 @@
             <section id="home" class="py-12 lg:py-24 bg-gray-50">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid lg:grid-cols-12 gap-12 items-center">
-                        
                         <div class="lg:col-span-6 text-center lg:text-left">
                             <span class="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold bg-green-100 text-green-800 border border-green-200 mb-6">
                                 <span class="flex h-2 w-2 rounded-full bg-green-800 mr-2 animate-pulse"></span>
@@ -116,6 +115,14 @@
                                         </svg>
                                     </div>
                                     Stunning & Intuitive Visuals
+                                </div>
+                                <div class="flex items-center gap-3 text-sm font-medium text-gray-700">
+                                    <div class="p-2 bg-green-50 rounded-lg text-green-800">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                        </svg>
+                                    </div>
+                                    Safe & Secure Data Extraction
                                 </div>
                             </div>
                         </div>
@@ -207,10 +214,52 @@
                     </div>
                 </div>
             </section>
-            <section class="py-16 lg:py-24 overflow-hidden" id="about">
+            <section class="py-12 lg:py-24" id="about">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="grid grid-cols-1 lg:grid-cols-12 items-center gap-12 lg:gap-10">
-                        <div class="lg:col-span-7 col-span-12 order-1 lg:order-2">
+                    <div class="grid lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-5 text-center lg:text-left">
+                            <div>
+                                <small class="text-green-800 uppercase tracking-[0.3em] font-black text-xs">How does InstaSent Work?</small>
+                                
+                                <div class="mb-6 mt-4">
+                                    <h2 class="mb-6 text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">Understanding the Brain Behind InstaSent</h2>                                    
+                                    <div class="space-y-5 text-gray-600 leading-relaxed text-justify">
+                                        <p>
+                                            InstaSent operates through the integration of three core layers: 
+                                            data scraping, artificial intelligence integration, and result visualization. 
+                                            The process begins when users input the Instagram username
+                                            and the number of posts, after which the request is sent to the 
+                                            backend, triggering <span class="text-green-800 font-medium"><u>Selenium</u></span> 
+                                            to perform automated 
+                                            <span class="text-green-800 font-medium"><u>web scraping</u></span>.
+                                        </p>
+                                        <p>
+                                            Raw (unpreprocessed) 
+                                            comment data is then processed using 
+                                            <span class="text-green-800 font-medium"><u>Pandas</u></span> 
+                                            and classified by a 
+                                            <span class="text-green-800 font-medium"><u>Support Vector Machine (SVM)</u></span> 
+                                            SVM trained on 
+                                            <span class="text-green-800 font-medium"><u>over 1000+ data samples</u></span> 
+                                            and map every data into three sentiment categories: 
+                                            <span class="text-green-800 font-medium"><u>positive</u></span>, 
+                                            <span class="text-green-800 font-medium"><u>neutral</u></span>, 
+                                            and <span class="text-green-800 font-medium"><u>negative</u></span>. 
+                                            The analysis results, including total post statistics
+                                            and sentiment percentages, 
+                                            are then sent back to the frontend.
+                                        </p>
+                                        <p>
+                                            In the final stage, the data is captured by 
+                                            <span class="text-green-800 font-medium"><u>Vue.js</u></span> 
+                                            and rendered into visually appealing components 
+                                            with the support of <span class="text-green-800 font-medium"><u>Chart.js</u></span>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-7 text-center lg:text-left">
                             <div class="bg-white p-6 md:p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100">
                                 <div class="hidden lg:block relative w-full pt-4 pb-4">
                                     <div class="grid grid-cols-4 gap-4 w-full relative z-10">
@@ -263,7 +312,7 @@
                                                     <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" /><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" /></svg>
                                                 </div>
                                             </div>
-                                            <span class="text-xs font-bold text-gray-800 mt-4 leading-tight px-1">Vue.js & Chart.js Visualization</span>
+                                            <span class="text-xs font-bold text-gray-800 mt-4 leading-tight px-1">Visualization</span>
                                         </div>
 
                                         <div class="flex flex-col items-center text-center">
@@ -283,7 +332,7 @@
                                                 </div>
                                                 <svg class="absolute top-1/2 -left-15 -translate-y-1/2 w-5 h-5 text-green-300" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
                                             </div>
-                                            <span class="text-xs font-bold text-gray-800 mt-4 leading-tight px-1">Naive Bayes AI Classification</span>
+                                            <span class="text-xs font-bold text-gray-800 mt-4 leading-tight px-1">Model Classification</span>
                                         </div>
 
                                         <div class="flex flex-col items-center text-center">
@@ -293,101 +342,57 @@
                                                 </div>
                                                 <svg class="absolute top-1/2 -left-15 -translate-y-1/2 w-5 h-5 text-green-300" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
                                             </div>
-                                            <span class="text-xs font-bold text-gray-800 mt-4 leading-tight">Data Preprocessing (Pandas)</span>
+                                            <span class="text-xs font-bold text-gray-800 mt-4 leading-tight">Data Preprocessing</span>
                                         </div>
-
                                     </div>
                                 </div>
-
                                 <div class="flex flex-col items-center gap-2 lg:hidden">
                                     <style>.mob-arrow { @apply text-green-300 w-5 h-5 my-1; }</style>
                                     
-                                    <div class="w-full flex items-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
+                                    <div class="w-full flex items-center justify-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
                                         <div class="w-12 h-12 shrink-0 rounded-full bg-white text-green-600 flex items-center justify-center border border-green-200 shadow-sm"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg></div>
                                         <p class="font-bold text-gray-800 text-sm">1. User Input</p>
                                     </div>
-                                    <svg class="mob-arrow" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
+                                    <svg class="mob-arrow md: w-5 h-5 text-green-300" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
 
-                                    <div class="w-full flex items-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
+                                    <div class="w-full flex items-center justify-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
                                         <div class="w-12 h-12 shrink-0 rounded-full bg-white text-green-600 flex items-center justify-center border border-green-200 shadow-sm"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008z" /></svg></div>
                                         <p class="font-bold text-gray-800 text-sm">2. Backend Transmission</p>
                                     </div>
-                                    <svg class="mob-arrow" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
+                                    <svg class="mob-arrow md: w-5 h-5 text-green-300" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
 
-                                    <div class="w-full flex items-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
+                                    <div class="w-full flex items-center justify-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
                                         <div class="w-12 h-12 shrink-0 rounded-full bg-white text-green-600 flex items-center justify-center border border-green-200 shadow-sm"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg></div>
                                         <p class="font-bold text-gray-800 text-sm">3. Selenium Scraping Trigger</p>
                                     </div>
-                                    <svg class="mob-arrow" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
+                                    <svg class="mob-arrow md: w-5 h-5 text-green-300" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
 
-                                    <div class="w-full flex items-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
+                                    <div class="w-full flex items-center justify-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
                                         <div class="w-12 h-12 shrink-0 rounded-full bg-white text-green-600 flex items-center justify-center border border-green-200 shadow-sm"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" /></svg></div>
                                         <p class="font-bold text-gray-800 text-sm">4. Comment Collection</p>
                                     </div>
-                                    <svg class="mob-arrow" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
+                                    <svg class="mob-arrow md: w-5 h-5 text-green-300" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
 
-                                    <div class="w-full flex items-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
+                                    <div class="w-full flex items-center justify-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
                                         <div class="w-12 h-12 shrink-0 rounded-full bg-white text-green-600 flex items-center justify-center border border-green-200 shadow-sm"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.054-2.066.018a15.03 15.03 0 01-2.924-.462c-1.573-.443-2.668-2.028-2.668-3.702 0-2.31 1.76-4.237 4.02-4.531.523-.068 1.054-.105 1.593-.112m6.524 0c.54.007 1.07.044 1.593.112 2.26.294 4.02 2.22 4.02 4.531 0 1.674-1.095 3.259-2.668 3.702a15.03 15.03 0 01-2.924.462c-.68.072-1.378.078-2.066-.018M12 12v3m0 0a3 3 0 100-6 3 3 0 000 6z" /></svg></div>
-                                        <p class="font-bold text-gray-800 text-sm">5. Data Preprocessing (Pandas)</p>
+                                        <p class="font-bold text-gray-800 text-sm">5. Data Preprocessing</p>
                                     </div>
-                                    <svg class="mob-arrow" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
+                                    <svg class="mob-arrow md: w-5 h-5 text-green-300" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
 
-                                    <div class="w-full flex items-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
+                                    <div class="w-full flex items-center justify-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
                                         <div class="w-12 h-12 shrink-0 rounded-full bg-white text-green-600 flex items-center justify-center border border-green-200 shadow-sm"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" /></svg></div>
-                                        <p class="font-bold text-gray-800 text-sm">6. Naive Bayes AI</p>
+                                        <p class="font-bold text-gray-800 text-sm">6. Model Classification</p>
                                     </div>
-                                    <svg class="mob-arrow" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
+                                    <svg class="mob-arrow md: w-5 h-5 text-green-300" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
 
-                                    <div class="w-full flex items-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
+                                    <div class="w-full flex items-center justify-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
                                         <div class="w-12 h-12 shrink-0 rounded-full bg-white text-green-600 flex items-center justify-center border border-green-200 shadow-sm"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" /></svg></div>
                                         <p class="font-bold text-gray-800 text-sm">7. Transmission Back</p>
                                     </div>
-                                    <svg class="mob-arrow" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
-                                    <div class="w-full flex items-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
+                                    <svg class="mob-arrow md: w-5 h-5 text-green-300" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>
+                                    <div class="w-full flex items-center justify-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
                                         <div class="w-12 h-12 shrink-0 rounded-full bg-white text-green-600 flex items-center justify-center border border-green-200 shadow-sm"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" /><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" /></svg></div>
-                                        <p class="font-bold text-gray-800 text-sm">8. Vue.js & Chart.js</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="lg:col-span-5 col-span-12 order-2 lg:order-1">
-                            <div>
-                                <small class="text-green-800 uppercase tracking-[0.3em] font-black text-xs">How does InstaSent Work?</small>
-                                
-                                <div class="mb-6 mt-4">
-                                    <h2 class="mb-6 text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">Understanding the Brain Behind InstaSent</h2>                                    
-                                    <div class="space-y-5 text-gray-600 leading-relaxed text-justify">
-                                        <p>
-                                            InstaSent operates through the integration of three core layers: 
-                                            data scraping, artificial intelligence integration, and result visualization. 
-                                            The process begins when users input the Instagram username
-                                            and the number of posts, after which the request is sent to the 
-                                            backend, triggering <span class="text-green-800 font-medium"><u>Selenium</u></span> 
-                                            to perform automated 
-                                            <span class="text-green-800 font-medium"><u>web scraping</u></span>.
-                                        </p>
-                                        <p>
-                                            Raw (unpreprocessed) 
-                                            comment data is then processed using 
-                                            <span class="text-green-800 font-medium"><u>Pandas</u></span> 
-                                            and classified by a 
-                                            <span class="text-green-800 font-medium"><u>Support Vector Machine (SVM)</u></span> 
-                                            model trained on 
-                                            <span class="text-green-800 font-medium"><u>over 1000+ data samples</u></span> 
-                                            into three sentiment categories: 
-                                            <span class="text-green-800 font-medium"><u>positive</u></span>, 
-                                            <span class="text-green-800 font-medium"><u>neutral</u></span>, 
-                                            or <span class="text-green-800 font-medium"><u>negative</u></span>. 
-                                            The analysis results, including total post statistics
-                                            and sentiment percentages, 
-                                            are then sent back to the frontend.
-                                        </p>
-                                        <p>
-                                            In the final stage, the data is captured by 
-                                            <span class="text-green-800 font-medium"><u>Vue.js</u></span> 
-                                            and rendered into visually appealing components 
-                                            with the support of <span class="text-green-800 font-medium"><u>Chart.js</u></span>.
-                                        </p>
+                                        <p class="font-bold text-gray-800 text-sm">8. Visualization</p>
                                     </div>
                                 </div>
                             </div>
@@ -557,4 +562,38 @@
         </main>
     </div>
 </body> 
+<footer class="bg-gray-100 pt-3 pb-3">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+      <div class="grid grid-cols-12 items-center justify-center gap-6">
+         <div class="lg:col-span-3 col-span-12">
+            <a class="mb-4 mb-lg-0 block text-inverse" href="../index.html"><img class="h-10 w-auto" src="./assets/images/logo/instasenti.png" alt="" /></a>
+         </div>
+         <div class="lg:col-span-6 col-span-12 items-center justify-center">
+            <div class="text-sm mb-3 mb-lg-0 text-lg-center">
+               Copyright © 2026
+
+               <span><a href="#">InstaSent</a></span>
+               | Designed by
+               <span><a href="#home" target="_blank" class="text-green-600">Felix Mcgill</a> • Distributed by <a href="https://instagram.com/skrwydra_" target="_blank" class="text-green-600">Skrwydra</a></span></span>
+            </div>
+         </div>
+         <div class="lg:col-span-3">
+            <div class="lg:text-end flex items-center lg:justify-end">
+
+               <div class="flex gap-4">
+                  <a href="https://instagram.com/skrwydra_" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
+                  </a>
+                  <a href="#!" class="">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
+                 </a>
+                  <a href="#!" class="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
 </html>
