@@ -122,6 +122,7 @@ def scrape_comment(target_username, range_mode = "all", custom_range="", maxscro
     print(f"Jumlah postingan yang dipilih: {selected_post}")
 
     comments = []
+    times    = []
     for u in selected_url:
         
         driver.get(u)
@@ -149,9 +150,25 @@ def scrape_comment(target_username, range_mode = "all", custom_range="", maxscro
             '//span[@class="x1lliihq x1plvlek xryxfnj x1n2onr6 xyejjpt x15dsfln x193iq5w xeuugli x1fj9vlw x13faqbe x1vvkbs x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x x1i0vuye xvs91rp xo1l8bm x5n08af"]'
         )
 
+        waktu_komentar  = driver.find_elements(By.TAG_NAME, "time")
+
         for komentar in komentar_elemen:
             text = komentar.text
             if text:
                 comments.append(text)
-    return comments, jml_all_post, selected_post
+
+        temp_times = []
+        for waktu in waktu_komentar:
+            val_waktu = waktu.get_attribute('title')
+            if val_waktu:
+                temp_times.append(val_waktu)
+
+        if len(temp_times) > 2:
+            times.extend(temp_times[1:-1])
+        elif len(temp_times) == 2:
+            pass
+
+    print(len(times))
+    print(len(comments))
+    return comments, times, jml_all_post, selected_post
 

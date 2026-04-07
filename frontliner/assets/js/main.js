@@ -81,6 +81,20 @@ createApp({
                     writer: 'Zulfikar, <i>et al</i>.',
                     desc  : 'The purpose of this study is to analyze text documents from Twitter about public policies in handling COVID-19 that are currently or have been determined. ',
                     link  : 'https://shura.shu.ac.uk/id/eprint/31645'
+                },
+                {
+                    id: 4,
+                    title : 'Selenium vs. Puppeteer: Which One to Use?',
+                    writer: 'Anonim',
+                    desc  : 'Comparing Puppeteer and Selenium helps you pick the right tool for web automation and testing. Puppeteer came out five years ago and became popular fast because it has great features and works well or many different use cases',
+                    link  : 'https://medium.com/@datajournal/puppeteer-vs-selenium-6bdef2f0a1c6'
+                },
+                {
+                    id: 5,
+                    title : 'Analisis Sentimen Review Film Menggunakan TF-IDF dan Support Vector Machine',
+                    writer: 'Gifari, <i>et al</i>.',
+                    desc  : 'Metode yang digunakan pada penelitian ini adalah TF-IDF dan SVM. Metode ini dipilih karena mampu melakukan pembobotan terhadap kata dan mengklasifikasikan data berdimensi tinggi.',
+                    link  : 'https://journal.shantibhuana.ac.id/index.php/jifotech/article/download/330/173'
                 }
             ],
             formData: {
@@ -98,7 +112,12 @@ createApp({
             if (!this.analysisResult) return null;
             const summary = this.analysisResult.summary;
             return typeof summary === 'string' ? JSON.parse(summary) : summary;
-        }
+        },
+        parsedComment() {
+            if (!this.analysisResult) return null;
+            const comment = this.analysisResult.top_5_comments;
+            return typeof comment === 'string' ? JSON.parse(comment) : comment;
+        },
     },
     methods: {
         configureWindow() {
@@ -130,6 +149,36 @@ createApp({
                 this.handleError(error);
             } finally {
                 this.isLoading = false;
+            }
+        },
+
+        async downloadExcel() {
+            if (!this.analysisResult || !this.analysisResult.full_data) {
+                alert("There is no data to to export")
+                return;
+            }
+
+            try {
+                const payload = {
+                    data: this.analysisResult.full_data
+                };
+
+                const response = await axios.post('http://127.0.0.1:8000/analyze/instagram/export', payload, 
+                    {responseType: 'blob', headers: { 'Content-Type': 'application/json' }
+                });
+
+                const url  = window.URL.createObjectURL(new Blob([response.data]));
+                const link = document.createElement('a');
+                link.href  = url 
+                link.setAttribute('download', 'instasent_results.xlsx');
+                document.body.appendChild(link);
+                link.click();
+                
+                link.remove();
+                window.URL.revokeObjectURL(url);
+            } catch(error) {
+                alert('Failed to download Excel File');
+                console.error(error);
             }
         },
 
@@ -191,6 +240,13 @@ createApp({
             }
             console.error("Analysis Error:", error);
             alert("Kendala: " + this.errorMessage);
-        }
+        },
+        
+        getLabelClass(label) {
+            const l = String(label).toLowerCase();
+            if (l === 'positive' || l === '1') return 'bg-green-100 text-green-700 border border-green-200';
+            if (l === 'negative' || l === '0') return 'bg-red-100 text-red-700 border border-red-200';
+            return 'bg-amber-100 text-amber-700 border border-amber-200';
+        },
     }
 }).mount('#app');
