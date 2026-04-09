@@ -66,12 +66,10 @@ cp .env.example .env
 ```
 **5. Fill .env value**
 ```bash
-DB_HOST=
-DB_PORT=
-DB_USER=
-DB_PASSWORD=
-DB_NAME=
-DB_URL=
+INSTAGRAM_USERNAME =
+INSTAGRAM_PASSWORD =
+
+DEFAULT_MAX_SCROLL = 30 # recommended
 ```
 **6. Run the Uvicorn Server**
 ```bash
