@@ -7,23 +7,23 @@ This project is built with a modern full-stack architecture that decouples the f
 ### Frontend
 ![Vue.js](https://img.shields.io/badge/Vue.js%203-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white) ![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white) ![SweetAlert2](https://img.shields.io/badge/SweetAlert2-8A2BE2?style=for-the-badge)
 
-* **Framework:** Vue.js 3 (Options API)
+* **Framework:** Vue.js 3 
 * **Language:** JavaScript
 * **Styling:** Tailwind CSS
-* **Data Visualization:** Chart.js (Sentiment distribution charts)
-* **Data Fetching:** Axios (Backend REST API communication)
-* **Notifications:** SweetAlert2 (Interactive UI alerts and loading states)
+* **Data Visualization:** Chart.js 
+* **Data Fetching:** Axios
+* **Notifications:** SweetAlert2 
 
 ---
 
 ### Backend & Machine Learning
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi) ![Python](https://img.shields.io/badge/Python_3-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 
-* **Framework:** FastAPI (Python)
+* **Framework:** FastAPI
 * **Language:** Python 3.12+
-* **Machine Learning:** Scikit-Learn (Support Vector Machine algorithms)
-* **Data Scraping:** Selenium (Instagram comment extraction automation)
-* **Data Processing:** Pandas & Openpyxl (DataFrame manipulation and Excel exporting)
+* **Machine Learning:** Scikit-Learn 
+* **Data Scraping:** Selenium 
+* **Data Processing:** Pandas & Openpyxl 
 
 ## 📂 Directory Structure
 ```bash
