@@ -52,16 +52,18 @@ instasent/
 ```bash
 git clone https://github.com/ardywrks10/instasent-web-app.git
 ```
-**2. Navigate to the Project Directory:**
+**2. Create Virtual Environment**
 ```bash
-cd bank-statement-extraction
+python -m venv my_env
+source my_env/bin/active # di Windows, gunakan my_env\Scripts\activate
 ```
 **3. Install Depedencies:**
 ```bash
-pip install -r requirements.pip.txt
+pip install -r requirements.txt
 ```
 **4. Make .env to connect to database client**
 ```bash
+cd backbone
 cp .env.example .env
 ```
 **5. Fill .env value**
